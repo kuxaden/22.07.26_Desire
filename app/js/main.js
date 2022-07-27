@@ -14,4 +14,10 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 3000
     })
+
+    var mixer = mixitup('.gallery__inner',{
+        load: {
+            filter: '.living'
+        }
+    });
 })
