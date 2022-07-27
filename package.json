@@ -9,7 +9,6 @@
   "author": "Denys Kuksa",
   "license": "ISC",
   "devDependencies": {
-    "@fancyapps/ui": "^4.0.30",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

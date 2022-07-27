@@ -33,7 +33,6 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
-    'node_modules/@fancyapps/ui/dist/fancybox.esm.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -47,8 +46,7 @@ function styles() {
       .pipe(scss({outputStyle: 'compressed'}))
       .pipe(concat('style.min.css'))
       .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 version'],
-        grid: true
+        cascade: false
       }))
       .pipe(dest('app/css'))
 }
