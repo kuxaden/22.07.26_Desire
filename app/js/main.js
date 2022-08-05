@@ -7,6 +7,14 @@ $(function () {
         $('.rightside-menu').addClass('rightside-menu--close');
     });
 
+    $('.header__btn-menu').on('click', function(){
+        $('.menu').toggleClass('menu--open');
+    });
+
+    if($(window).width() < 651){
+        $('.works-path__item--measurements').appendTo($('.works-path__item-box'));
+    }
+
     $('.top__slider').slick({
         dots:true,
         arrows: false,
@@ -24,7 +32,7 @@ $(function () {
         prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrowleft"><img src="images/arrow-prev.svg" alt="arrow-left"></button>',
         nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowright"><img src="images/arrow-next.svg" alt="arrow-right"></button>'
     });
-    article-slider__box
+    
     var mixer = mixitup('.gallery__inner',{
         load: {
             filter: '.living'

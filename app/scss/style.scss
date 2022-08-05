@@ -19,6 +19,9 @@
         cursor: pointer;
         padding: 0;
     }
+    &__btn-menu {
+        display: none;
+    }
 }
 .menu{
     padding-right: 15px;
@@ -74,7 +77,12 @@
     &__info-text {
         margin-bottom: 16px;
     }
-    
+    &__info-email {
+        color:inherit;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 16px 0 22px;
+    }
     &__form{
         display: flex;
     }
@@ -84,7 +92,7 @@
         background-color: transparent;
         height: 40px;
         width: 100%;
-        border: 1 px solid rgba($title, .7);
+        border: 1px solid rgba($title, .7);
         margin-right: 10px;
         &::placeholder {
             font-size: 16px;
@@ -218,11 +226,11 @@
     padding: 13px 14px;
     &__list {
         display: flex;
+        overflow-x: auto;
     }
     &__item::after {
         content: '/ ';
-        margin-left: -4px;
-        margin-right: 4px;
+        padding-right: 8px;
     }
     &__item:last-child::after {
         content: '';
@@ -266,6 +274,8 @@
     }
     &__slider-title {
         color: $title;
+        @extend %title-font;
+
         font-size: 110px;
         line-height: 135px;
         padding-bottom: 26px;
@@ -318,8 +328,6 @@
         }
     }
     &__images {
-        min-height: 350px ;
-        min-width: 350px;
         object-fit: cover;
     }
     &__info {
@@ -1147,3 +1155,4 @@
         margin-bottom: 20px;
     }
 }
+@import 'media';
