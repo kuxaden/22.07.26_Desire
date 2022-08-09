@@ -773,6 +773,7 @@
         }
     }
     &__box {
+        display: flex;
         position: relative;
     }
     &__img {
@@ -782,6 +783,7 @@
     }
     &__title {
         position: absolute;
+        width: 170px;
         top: 0;
         bottom: 0;
         left: 0;
@@ -856,10 +858,7 @@
             margin: 0 auto;
         }
     }
-    .article-popup {
-        position: relative;
-    }
-    &__item-popup {
+    .blog__item-popup {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -913,6 +912,11 @@
     }
     &__social-item {
         margin-right: 20px;
+    }
+}
+.article-popup {
+    &__box {
+        position: relative;
     }
 }
 // правое меню
@@ -1109,7 +1113,6 @@
         color: #707070;
     }
     &__form {
-        padding-bottom: 100px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
